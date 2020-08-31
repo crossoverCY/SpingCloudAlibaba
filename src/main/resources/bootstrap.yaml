@@ -1,0 +1,24 @@
+server:
+  port: 9090
+
+spring:
+  application:
+    name: spring-cloud-alibaba
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      config:
+        server-addr: 192.168.154.129:8848
+        namespace: 64032987-acbf-4794-9d3b-53c5c89faa58
+        file-extension: properties
+        shared-dataids: alibaba-nacos-config.properties
+        refreshable-dataids: alibaba-nacos-config.properties
+      discovery:
+        server-addr: 192.168.154.129:8848
+        namespace: 64032987-acbf-4794-9d3b-53c5c89faa58
+    sentinel:
+      transport:
+        dashboard: 192.168.154.129:9090
+        port: 8719
+
